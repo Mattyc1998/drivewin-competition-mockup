@@ -152,16 +152,13 @@ function Hero({ featured }) {
                 alt={featured.title}
                 className="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/10 to-transparent" />
               <span className="absolute top-4 left-4 rounded-full bg-gold-500 px-3 py-1 text-xs font-bold text-navy-950">
                 FLAGSHIP PRIZE
               </span>
-              <div className="absolute bottom-4 left-4 right-4">
-                <p className="text-2xl font-extrabold text-white">{featured.title}</p>
-                <p className="text-sm text-white/60">{featured.tagline}</p>
-              </div>
             </div>
             <div className="p-5">
+              <p className="text-2xl font-extrabold text-white">{featured.title}</p>
+              <p className="text-sm text-white/60 mb-5">{featured.tagline}</p>
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-white/60">{sold.toLocaleString()} / {featured.totalTickets.toLocaleString()} sold</span>
                 <span className="text-sm font-bold text-gold-400">{percent}%</span>

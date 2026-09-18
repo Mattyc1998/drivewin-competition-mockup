@@ -33,9 +33,9 @@ export const INITIAL_COMPETITIONS = [
     cashAlt: 68000,
     createdAt: daysAgo(0),
     images: [
+      img('photo-1638686302275-0e87df720aca'),
       img('photo-1679506640590-f0152786dff0'),
       img('photo-1602013871952-8379f19a15f1'),
-      img('photo-1638686302275-0e87df720aca'),
     ],
     description:
       "Step into the new Range Rover Sport Autobiography — the pinnacle of modern luxury SUV design. Finished in Batumi Gold with a full Nappa leather interior, this plug-in hybrid delivers effortless performance alongside genuine everyday usability. One lucky winner will drive away in this exact vehicle, fully taxed and ready to collect (or we'll deliver it to your door, UK mainland).",
@@ -81,9 +81,9 @@ export const INITIAL_COMPETITIONS = [
     cashAlt: 28000,
     createdAt: daysAgo(6),
     images: [
-      img('photo-1615812595024-43ac7a9c0586'),
       img('photo-1610579552025-ea146ae69356'),
       img('photo-1615172282427-9a57ef2d142e'),
+      img('photo-1615812595024-43ac7a9c0586'),
     ],
     description:
       'The most powerful production Ducati ever built. The Panigale V4S combines MotoGP-derived aerodynamics with electronic suspension that reads the road in real time. This is a bike built for riders who want the absolute cutting edge — and now it could be yours for the price of a coffee.',
@@ -100,17 +100,17 @@ export const INITIAL_COMPETITIONS = [
     category: 'car',
     featured: false,
     title: 'BMW M4 Competition xDrive',
-    tagline: '503bhp · Matte Black · Carbon Roof',
+    tagline: '503bhp · Alpine White · Carbon Roof',
     location: 'Delivered to your door, UK mainland',
     cashAlt: 89000,
     createdAt: daysAgo(9),
     images: [
+      img('photo-1741889823656-c056b0c43749'),
+      img('photo-1570356528233-b442cf2de345'),
       img('photo-1616591938203-9b5630a01006'),
-      img('photo-1594051673969-172a6f721d3c'),
-      img('photo-1626381958625-f4e4ea343925'),
     ],
     description:
-      "Head-turning presence, all-wheel-drive traction and a twin-turbo straight-six that pulls hard right to the redline. This M4 Competition is finished in a deep matte black with a full carbon exterior pack — and this draw is nearly full, so ticket numbers are going fast.",
+      "Head-turning presence, all-wheel-drive traction and a twin-turbo straight-six that pulls hard right to the redline. This M4 Competition is finished in Alpine White with a full carbon exterior pack — and this draw is nearly full, so ticket numbers are going fast.",
     ticketPrice: 3.49,
     totalTickets: 22000,
     ticketsSoldBase: 20900, // 95%
