@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+
+  --color-navy-950: #05070f;
+  --color-navy-900: #0a0e1a;
+  --color-navy-800: #0f1526;
+  --color-navy-700: #161d35;
+  --color-navy-600: #202944;
+  --color-navy-500: #2c3757;
+
+  --color-gold-400: #f0cf72;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b8912a;
+
+  --color-red-500: #e0293e;
+  --color-red-600: #c11f32;
+
+  --color-emerald-400: #34d399;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background: var(--color-navy-950);
+  color: #e6e8f0;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: var(--color-navy-950);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  background-size: 400px 100%;
+  animation: shimmer 2.2s infinite;
+}
