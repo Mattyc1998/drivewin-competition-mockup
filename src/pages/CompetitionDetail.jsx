@@ -43,6 +43,8 @@ export default function CompetitionDetail() {
 
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
           <div className="lg:col-span-3">
+            {/* Future: crossfade between images on thumbnail change instead of an
+                instant cut — e.g. an AnimatePresence/opacity transition. */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-navy-800">
               <img
                 src={competition.images[activeImg]}

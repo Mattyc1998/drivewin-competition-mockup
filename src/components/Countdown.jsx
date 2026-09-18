@@ -14,6 +14,8 @@ export default function Countdown({ drawDate, compact = false, ended = false }) 
   }
 
   if (compact) {
+    // Future: colour-code by urgency (red under ~24-48h, gold otherwise) so
+    // draws closing soon stand out more than the uniform gold used today.
     return (
       <span className="text-sm font-semibold text-gold-400">
         {parts.days > 0 ? `${parts.days}d ${parts.hours}h` : `${parts.hours}h ${parts.minutes}m`} left

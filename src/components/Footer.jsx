@@ -4,7 +4,7 @@ const social = ['Facebook', 'Instagram', 'TikTok', 'X'];
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-navy-900 mt-24">
+    <footer className="border-t border-white/10 bg-navy-900">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-4">
           <div>

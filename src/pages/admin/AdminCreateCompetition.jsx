@@ -73,6 +73,7 @@ export default function AdminCreateCompetition() {
         title: form.title.trim(),
         tagline: form.tagline.trim() || 'New competition',
         location: 'Delivered UK mainland',
+        createdAt: new Date().toISOString(),
         images: [imagePreview || PLACEHOLDER_IMG, PLACEHOLDER_IMG, PLACEHOLDER_IMG],
         description: form.description.trim(),
         ticketPrice: Number(form.ticketPrice),

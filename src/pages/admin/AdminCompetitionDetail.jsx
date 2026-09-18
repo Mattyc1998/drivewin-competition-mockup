@@ -143,6 +143,9 @@ export default function AdminCompetitionDetail() {
         <h2 className="text-base font-bold text-white mb-4">
           Entrants <span className="text-white/40 font-normal">({entrants.length} shown)</span>
         </h2>
+        {/* Future: small empty-state illustration here instead of plain text;
+            also revisit stat card styling and table density across /admin
+            for a more designed, less "default dashboard" feel. */}
         {entrants.length === 0 ? (
           <p className="text-white/40 text-sm">No entrants yet.</p>
         ) : (

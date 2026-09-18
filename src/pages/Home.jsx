@@ -7,8 +7,9 @@ import HowItWorksSteps from '../components/HowItWorksSteps.jsx';
 import ProgressBar from '../components/ProgressBar.jsx';
 import Countdown from '../components/Countdown.jsx';
 import { useAppState, useAllWinners, useDemoSoldCount } from '../store/AppContext.jsx';
-import { percentSold, ticketsSoldTotal } from '../data/competitions.js';
+import { percentSold, ticketsSoldTotal, isNewestLive } from '../data/competitions.js';
 import { formatGBP } from '../utils/format.js';
+import { ShieldCheckIcon, BoltTicketIcon, BroadcastIcon } from '../components/icons/TrustIcons.jsx';
 
 export default function Home() {
   const { competitions } = useAppState();
@@ -94,19 +95,23 @@ export default function Home() {
 }
 
 function Hero({ featured }) {
+  const { competitions } = useAppState();
   const demoCount = useDemoSoldCount(featured?.id);
   if (!featured) return null;
   const percent = percentSold(featured, demoCount);
   const sold = ticketsSoldTotal(featured, demoCount);
+  const isNewest = isNewestLive(featured, competitions);
 
   return (
     <section className="relative overflow-hidden border-b border-white/10">
+      {/* Future: swap this flat gradient for a subtle looping hero video/blurred
+          car footage behind the copy, once real footage/photography exists. */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(212,175,55,0.08),transparent_45%),radial-gradient(circle_at_80%_60%,rgba(224,41,62,0.10),transparent_45%)]" />
       <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-gold-500/30 bg-gold-500/10 px-3 py-1 text-xs font-semibold text-gold-400 mb-6">
-              🔥 New draw just launched
+              {isNewest ? '🔥 New draw just launched' : '⭐ Featured competition'}
             </span>
             <h1 className="text-4xl font-extrabold leading-[1.08] text-white sm:text-5xl lg:text-6xl text-balance">
               Some people buy cars.
@@ -130,9 +135,10 @@ function Hero({ featured }) {
                 How it works
               </Link>
             </div>
-            <div className="mt-8 flex items-center gap-6 text-sm text-white/40">
-              <span>⭐ 4.9/5 from demo reviewers</span>
-              <span>🔒 Secure checkout</span>
+            <div className="mt-8 flex flex-wrap gap-2">
+              <TrustBadge Icon={ShieldCheckIcon} label="Secure payments" />
+              <TrustBadge Icon={BoltTicketIcon} label="Instant ticket numbers" />
+              <TrustBadge Icon={BroadcastIcon} label="Live draws" />
             </div>
           </div>
 
@@ -176,5 +182,14 @@ function Hero({ featured }) {
         </div>
       </div>
     </section>
+  );
+}
+
+function TrustBadge({ Icon, label }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-medium text-white/70">
+      <Icon className="h-4 w-4 text-gold-400" />
+      {label}
+    </span>
   );
 }

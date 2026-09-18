@@ -10,6 +10,8 @@ function initialsOf(winner) {
 export default function WinnerCard({ winner, large = false }) {
   return (
     <div className="flex flex-col overflow-hidden rounded-xl border border-white/10 bg-navy-800">
+      {/* Future: overlay a "watch the draw" play button here once real draw
+          footage exists, to back up the "every draw is filmed live" claim. */}
       <div className={`relative ${large ? 'aspect-[4/3]' : 'aspect-[16/10]'} overflow-hidden bg-navy-700`}>
         <img src={winner.image} alt={winner.prize} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/10 to-transparent" />

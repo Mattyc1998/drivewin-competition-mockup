@@ -31,6 +31,8 @@ export default function MyTickets() {
           </Link>
         </div>
 
+        {/* Future: replace this plain empty state with a small illustration
+            (e.g. a ticket/car outline graphic) for a more designed feel. */}
         {tickets.length === 0 ? (
           <div className="rounded-xl border border-dashed border-white/15 py-20 text-center">
             <p className="text-white/50 mb-4">You haven't entered any competitions yet in this demo.</p>

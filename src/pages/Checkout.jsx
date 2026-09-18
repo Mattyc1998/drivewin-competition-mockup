@@ -3,6 +3,7 @@ import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-route
 import Layout from '../components/Layout.jsx';
 import { useCompetition, useAppDispatch, DEMO_USER } from '../store/AppContext.jsx';
 import { formatGBP } from '../utils/format.js';
+import { VisaMark, MastercardMark, AmexMark } from '../components/icons/CardBrandIcons.jsx';
 
 function formatCardNumber(v) {
   return v.replace(/\D/g, '').slice(0, 16).replace(/(.{4})/g, '$1 ').trim();
@@ -112,6 +113,11 @@ export default function Checkout() {
               <div className="flex items-center justify-between mb-4">
                 <h2 className="text-base font-bold text-white">Payment details</h2>
                 <span className="text-xs text-white/40">🔒 Simulated — no real charge</span>
+              </div>
+              <div className="mb-4 flex items-center gap-2">
+                <VisaMark className="rounded" />
+                <MastercardMark className="rounded" />
+                <AmexMark className="rounded" />
               </div>
               <div className="space-y-4">
                 <Field label="Card number" error={errors.cardNumber}>

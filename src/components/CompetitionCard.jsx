@@ -41,6 +41,8 @@ export default function CompetitionCard({ competition }) {
             Draw complete
           </span>
         ) : almostGone ? (
+          // Future: give >90%-sold cards a bigger/bolder urgency treatment
+          // than just this corner pill — e.g. a pulsing border on the card itself.
           <span className="absolute top-3 right-3 rounded-full bg-red-600 px-2.5 py-1 text-[11px] font-bold text-white animate-pulse">
             Almost sold out
           </span>
