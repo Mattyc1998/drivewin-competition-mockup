@@ -1,16 +1,34 @@
-# React + Vite
+# DriveWin — Competition Mockup
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Front-end demo of a car/motorbike prize competition site, built to show a prospective
+client the concept before a bespoke build is quoted.
 
-Currently, two official plugins are available:
+No real backend, payments, or authentication — everything runs client-side with
+in-memory/session state (React + Vite + Tailwind CSS v4 + React Router).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live demo:** https://drivewin-competition-mockup.vercel.app
 
-## React Compiler
+## What's included
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Homepage with a flagship competition hero, live competitions grid, recent winners,
+  and a trust-signal bar
+- Competition listing with filters (car/bike/cash) and sorting
+- Competition detail page with an image gallery and ticket quantity selector
+- Mocked checkout (format-only card validation, no real payment processor) and a
+  confirmation screen with generated ticket numbers
+- "My Tickets" page reflecting purchases made in the current demo session
+- Admin panel (`/admin`) for creating/editing competitions and running live draws
 
-## Expanding the Oxlint configuration
+## Running locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm install
+npm run dev
+```
+
+## Notes
+
+- All data is seeded in `src/data/` and mutated in memory via a React Context +
+  reducer (`src/store/AppContext.jsx`); nothing is persisted beyond `sessionStorage`.
+- Several `// Future:` comments throughout the codebase mark polish items intentionally
+  left out of this demo (hero video, draw footage, empty-state illustrations, etc.).
