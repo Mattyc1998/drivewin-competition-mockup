@@ -8,7 +8,7 @@ import { formatGBP } from '../utils/format.js';
 const categoryStyle = {
   car: 'bg-navy-600 text-white/90',
   bike: 'bg-navy-600 text-white/90',
-  cash: 'bg-gold-500/20 text-gold-400',
+  cash: 'bg-gold-500 text-navy-950',
 };
 
 export default function CompetitionCard({ competition }) {
