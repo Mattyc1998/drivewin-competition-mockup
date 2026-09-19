@@ -1,5 +1,8 @@
 // Seed / mock data for the demo. In a real build this would come from the backend.
-const img = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1400&q=80`;
+// Cropped server-side to the 4:3 ratio every card/gallery image renders at, using
+// Unsplash's entropy-based smart crop — without this, portrait-sourced photos got
+// blindly center-cropped by CSS object-cover and lost the vehicle off the bottom/top.
+const img = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&crop=entropy&w=1400&h=1050&q=80`;
 
 const now = new Date('2026-09-18T09:00:00Z');
 const daysFromNow = (d, h = 18) => {

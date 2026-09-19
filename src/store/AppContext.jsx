@@ -3,7 +3,7 @@ import { INITIAL_COMPETITIONS, ticketsSoldTotal, formatTicketNumber } from '../d
 import { mulberry32, fakeName } from '../data/fakeNames.js';
 import { PAST_WINNERS } from '../data/winners.js';
 
-const STORAGE_KEY = 'drivewin-demo-state-v2';
+const STORAGE_KEY = 'drivewin-demo-state-v3';
 
 export const DEMO_USER = {
   name: 'Alex Morgan',

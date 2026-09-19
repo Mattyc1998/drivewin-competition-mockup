@@ -1,4 +1,6 @@
-const img = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=800&q=80`;
+// Cropped server-side to 4:3 with entropy-based smart crop — see competitions.js
+// for why (CSS object-cover alone was cutting vehicles off in portrait sources).
+const img = (id) => `https://images.unsplash.com/${id}?auto=format&fit=crop&crop=entropy&w=800&h=600&q=80`;
 
 // Past winners — seed data for trust signals (homepage strip + full Winners page).
 export const PAST_WINNERS = [
